@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <!-- Three JS -->
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.3/dat.gui.min.js"></script>
+
+    <script src="CommonUtilities.js"></script>
+    <script src="Main.js"></script>
+    <script src="SwappingGrid.js"></script>
+
+<style>
+    #dat-gui-container {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+        border-radius: 10px;
+    }
+
+    #c {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+</head>
+<div id="ViewerDiv">
+    <canvas id="c"></canvas>
+    <div id="dat-gui-container"> </div>
+</div>
+
+<script>
+    show3DScene();
+</script>
+
+</html>
