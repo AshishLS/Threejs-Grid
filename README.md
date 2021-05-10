@@ -11,4 +11,18 @@ The grid divisions can be converted into any suitable unit, you will have to loo
 
 https://user-images.githubusercontent.com/10126020/117667938-1260b980-b1c3-11eb-99ea-416296a16e61.mp4
 
+### How to use:
 
+```javascript
+g_SwappingGrid = new SwappingGrid(g_Scene);
+g_SwappingGrid.addReferenceGrids(mainObjectBoundingBox);
+g_SwappingGrid.cameraChanged(g_Camera, true);
+
+function onCameraPositionChange(e) {
+  if (g_SwappingGrid) {
+    g_SwappingGrid.cameraChanged(g_Camera);
+  }
+}
+
+g_PerspCameraControl.addEventListener('change', onCameraPositionChange);
+```
